@@ -1,0 +1,13 @@
+# Ignorar dados sensíveis e de volume
+config/*
+data/*
+logs/*
+runner-config/*
+
+# Mas permitir subir as pastas
+!config/.gitkeep
+!data/.gitkeep
+!logs/.gitkeep
+!runner-config/.gitkeep
+
+# Node, Python ou outras linguagens? Adicione conforme necessário.
