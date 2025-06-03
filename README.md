@@ -72,7 +72,7 @@ docker logs -f gitlab
 ### 5. Acesse o GitLab no navegador
 
 ````bash
-http://gitlab-server.local:8929
+http://gitlab-server.local:80
 ````
 Login inicial:
     Usuário: root
@@ -84,7 +84,7 @@ A Senha e o e-mail PODE e DEVE ser mudada. Este caso foi apenas para exemplo.
 
 1. Acesse projeto-exemplo/
 2. Crie seu projeto com um .gitlab-ci.yml
-3. Registre o runner apontando para http://gitlab-server.local:8929 com seu token (nas configurações do projeto)
+3. Registre o runner apontando para http://gitlab-server.local:80 com seu token (nas configurações do projeto)
 4. Veja os pipelines rodando localmente 🧪
 
 ## 📦 Registro manual do runner (se necessário)
@@ -94,7 +94,7 @@ docker exec -it gitlab-runner gitlab-runner register
 ````
 
 Use:
-- GitLab URL: http://gitlab-server.local:8929
+- GitLab URL: http://gitlab-server.local:80
 - Token: Copie da interface do GitLab no seu projeto
 - Executor: docker
 - Imagem default: alpine

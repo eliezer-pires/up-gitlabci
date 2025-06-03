@@ -7,9 +7,9 @@ services:
     shm_size: '256m'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab-server.local:8929'
-        nginx['listen_port'] = 8929
-        gitlab_rails['gitlab_shell_ssh_port'] = 2424
+        external_url 'http://gitlab-server.local:80'
+        nginx['listen_port'] = 80
+        gitlab_rails['gitlab_shell_ssh_port'] = 5922
         gitlab_rails['initial_root_password'] = "Abcd@123456789"
         gitlab_rails['initial_root_password_email'] = "eliezerpiresti@gmail.com"
         puma['worker_processes'] = 0
@@ -20,9 +20,9 @@ services:
       - './logs:/var/log/gitlab'
       - './data:/var/opt/gitlab'
     ports:
-      - '8929:8929'
-      - '2433:433'
-      - '2424:22'
+      - '80:80'
+      - '433:433'
+      - '5922:5922'
 
   gitlab-runner:
     image: gitlab/gitlab-runner:latest
